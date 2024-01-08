@@ -4,5 +4,5 @@ if __name__ == "__main__":
 	import hidden_4
 
 	for h in dir(hidden_4):
-		if n[:2] != "__":
+		if h[:2] != "__":
 			print("{:s}".format(h))
