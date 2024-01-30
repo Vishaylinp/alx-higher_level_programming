@@ -1,4 +1,4 @@
-:#!/usr/bin/python3
+#!/usr/bin/python3
 
 """Define a rectangle"""
 
@@ -64,3 +64,8 @@ class Rectangle:
                 rectangle.append("\n")
         return ("".join(rectangle))
 
+    def __repr__(self):
+        """return recreation of a new instance"""
+        rectangle = "Rectangle(" + str(self.__width)
+        rectangle += "," + str(self.__height) + ")"
+        return (rectangle)
