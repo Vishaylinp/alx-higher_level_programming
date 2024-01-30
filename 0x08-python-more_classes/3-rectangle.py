@@ -62,4 +62,4 @@ class Rectangle:
             [rectangle.append('#') for row in range(self.__width)]
             if column != self.__height - 1:
                 rectangle.append("\n")
-            return ("".join(rectangle))
+        return ("".join(rectangle))
