@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Find a peak in a list of unsorted"""
+
+
 def find_peak(list_of_integers):
     """Find the peak in the list"""
     if list_of_integers is None or list_of_integers == []:
