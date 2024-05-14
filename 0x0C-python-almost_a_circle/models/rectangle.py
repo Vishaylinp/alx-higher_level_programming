@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Contains subclass of base"""
 from models.base import Base
 
