@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+"""Contains a Base class"""
+
 
 class Base:
     """A base Model
 
     private class atrribute:
-    __nb_objects = 0
+    __nb_objects: private class attribute
     """
 
     __nb_objects = 0
