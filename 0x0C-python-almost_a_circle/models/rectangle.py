@@ -1,4 +1,5 @@
 #!/usr/bin/python
+"""Contains subclass of base"""
 from models.base import Base
 
 
@@ -9,6 +10,7 @@ class Rectangle(Base):
         height: height
         x: x
         y: y
+        id: id
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
@@ -18,7 +20,8 @@ class Rectangle(Base):
         super().__init__(id)
 
     @property
-    def width(self):
+    def width(self)
+        """get width of rectangle"""
         return self.__width
 
     @width.setter
@@ -35,6 +38,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """ get height of rectangle"""
         return self.__height
 
     @height.setter
@@ -51,7 +55,9 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """get x value"""
         return self.__x
+
 
     @x.setter
     def x(self, value):
@@ -67,6 +73,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """get value of y"""
         return self.__y
 
     @y.setter
@@ -80,3 +87,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """Area of rectangle"""
+        return self.width * self.height
