@@ -89,18 +89,22 @@ class Rectangle(Base):
 
     def area(self):
         """Area of rectangle"""
-        return self.width * self.height
+        return self.__width * self.__height
 
     def display(self):
         """Rectangle with hashes"""
-        for x in range(0, self.height):
-            for y in range(0, self.width):
-                print('#', end='')
+        for y in range(self.y):
+            print("")
+        for r in range(self.__height):
+            for x in range(self.x):
+                print(" ", end="")
+            for c in range(self.__width):
+                print("#", end="")
             print()
 
     def __str__(self):
         """String of rectangle"""
         return (
-             f"[Rectangle] ({self.id}) "
-             f"{self.x}/{self.y} - {self.width}/{self.height}"
+             f"[Rectangle] ({self.__id}) "
+             f"{self.__x}/{self.__y} - {self.__width}/{self.__height}"
         )
