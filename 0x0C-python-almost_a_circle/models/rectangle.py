@@ -105,6 +105,29 @@ class Rectangle(Base):
     def __str__(self):
         """String of rectangle"""
         return (
-             f"[Rectangle] ({self.__id}) "
-             f"{self.__x}/{self.__y} - {self.__width}/{self.__height}"
+             f"[Rectangle] ({self.id}) "
+             f"{self.x}/{self.y} - {self.width}/{self.height}"
         )
+
+    def update(self, *args, **kwargs):
+        """Update class
+        Args: *arg: arguements
+              *Kwargs: key value pairs
+        """
+        if args and len(args) != 0:
+            list_a = ["id", "width", "height", "x", "y"]
+            for attr, v in zip(list_a, args):
+                setattr(self, attr, v)
+
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+
+    def dictationary(self):
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y,
+        }
