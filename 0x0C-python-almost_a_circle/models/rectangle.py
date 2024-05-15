@@ -90,3 +90,10 @@ class Rectangle(Base):
     def area(self):
         """Area of rectangle"""
         return self.width * self.height
+
+    def display(self):
+        """Rectangle with hashes"""
+        for x in range(0, self.height):
+            for y in range(0, self.width):
+                print('#', end='')
+            print()
