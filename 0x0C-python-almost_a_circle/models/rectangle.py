@@ -124,6 +124,7 @@ class Rectangle(Base):
                 setattr(self, k, v)
 
     def dictationary(self):
+        """return dict"""
         return {
             "id": self.id,
             "width": self.width,
