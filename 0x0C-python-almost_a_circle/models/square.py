@@ -28,3 +28,17 @@ class Square(Rectangle):
     def __str__(self):
         """String of square"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+
+    def update(self, *args, **kwargs):
+        """update attr
+        Args:
+            Args: arguement
+            kwargs: keyword
+        """
+        if args and len(args) != 0:
+            list_a = ["id", "size", "x", "y"]
+            for attr, v in zip(list_a, args):
+                setattr(self, attr, v)
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
