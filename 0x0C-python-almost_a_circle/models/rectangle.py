@@ -30,7 +30,7 @@ class Rectangle(Base):
         Arg:
             value: value of width
         """
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -47,7 +47,7 @@ class Rectangle(Base):
         Arg:
             value: height value
         """
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -64,7 +64,7 @@ class Rectangle(Base):
         Arg:
             value: x value
         """
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -81,7 +81,7 @@ class Rectangle(Base):
         Arg:
             value: x value
         """
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("y must ba an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
@@ -123,7 +123,7 @@ class Rectangle(Base):
             for k, v in kwargs.items():
                 setattr(self, k, v)
 
-    def dictationary(self):
+    def to_dictionary(self):
         """return dict"""
         return {
             "id": self.id,
